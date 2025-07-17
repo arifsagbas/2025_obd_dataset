@@ -1,0 +1,36 @@
+Driving Behavior Dataset
+
+This repository contains a labeled time-series dataset for analyzing different driving behaviors based on acceleration, deceleration, and engine conditions. Each data sample is stored in CSV format and represents a short driving segment collected under a specific driving pattern.
+
+File Structure:
+
+Each file is named using the following format:
+
+<Label>_<Date>.csv
+
+<Label>: A numeric class label (1–6) indicating the type of driving behavior.
+
+<Date>: The recording date in YYMMDD format (e.g., 20250215 corresponds to February 15, 2025).
+
+Example:
+
+1_20250215.csv → Very calm acceleration and deceleration
+
+3_20250301.csv → Aggressive driving
+
+Label Descriptions:
+
+1 → Very calm acceleration and deceleration
+2 → Normal driving with moderate acceleration and braking
+3 → Aggressive driving with sharp acceleration and braking
+4 → Constant speed driving at eco-friendly (ideal RPM) conditions
+5 → Constant speed driving at non-eco (high RPM) conditions
+6 → A combination of Label 1 and 4: calm and safe eco-driving on highways
+
+Notes:
+
+All data were collected using a smartphone-based sensing framework.
+
+Each CSV file contains multivariate time-series data representing motion, engine, and road parameters during a short driving session.
+
+The dataset can be used for research on driver behavior classification, eco-driving detection, and time-series modeling.
