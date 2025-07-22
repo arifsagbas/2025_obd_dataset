@@ -34,3 +34,140 @@ All data were collected using a smartphone-based sensing framework.
 Each CSV file contains multivariate time-series data representing motion, engine, and road parameters during a short driving session.
 
 The dataset can be used for research on driver behavior classification, eco-driving detection, and time-series modeling.
+
+
+Column Descriptions:
+
+Each CSV file contains multivariate time-series data with the following columns:
+
+accel_x – Linear acceleration along the X-axis (m/s²)
+
+accel_y – Linear acceleration along the Y-axis (m/s²)
+
+accel_z – Linear acceleration along the Z-axis (m/s²)
+
+gravity_x – Gravity vector along the X-axis (m/s²)
+
+gravity_y – Gravity vector along the Y-axis (m/s²)
+
+gravity_z – Gravity vector along the Z-axis (m/s²)
+
+linear_x – Body-frame linear acceleration (X) excluding gravity (m/s²)
+
+linear_y – Body-frame linear acceleration (Y) excluding gravity (m/s²)
+
+linear_z – Body-frame linear acceleration (Z) excluding gravity (m/s²)
+
+gyro_x – Gyroscope angular velocity around X-axis (rad/s)
+
+gyro_y – Gyroscope angular velocity around Y-axis (rad/s)
+
+gyro_z – Gyroscope angular velocity around Z-axis (rad/s)
+
+magnet_x – Magnetometer X-axis reading (μT)
+
+magnet_y – Magnetometer Y-axis reading (μT)
+
+magnet_z – Magnetometer Z-axis reading (μT)
+
+light – Ambient light level (lux)
+
+proximity – Proximity sensor reading (cm)
+
+latitude – GPS latitude (decimal degrees)
+
+longitude – GPS longitude (decimal degrees)
+
+altitude – GPS altitude above sea level (meters)
+
+gps_speed – GPS-reported speed (km/h)
+
+rpm – Engine revolutions per minute
+
+engine_load – Engine load percentage (%)
+
+speed – OBD-II reported vehicle speed (km/h)
+
+coolant_temp – Engine coolant temperature (°C)
+
+intake_air_temp – Temperature of intake air (°C)
+
+maf – Mass Air Flow (grams/sec)
+
+map – Manifold Absolute Pressure (kPa)
+
+ambient_temp – Ambient air temperature (°C)
+
+battery_voltage – Battery voltage (converted from hex, volts)
+
+timestamp – Timestamp of the recorded measurement
+
+maxSpeed – Speed limit at that road segment (km/h)
+
+highway – Road type from map (e.g., primary, trunk)
+
+name – Road name or segment label
+
+oneWay – Whether the road is one-way (yes/no)
+
+ref – Highway or route reference (e.g., D400)
+
+int_ref – International reference (e.g., E90)
+
+lanes – Number of lanes
+
+minSpeed – Minimum allowed speed (km/h)
+
+surface – Road surface type (e.g., asphalt, gravel)
+
+toll – Toll road indicator (yes/no)
+
+rms – Root Mean Square energy of ambient sound
+
+zcr – Zero Crossing Rate of audio signal
+
+decibel – Sound loudness level (dB)
+
+avg_amplitude – Average amplitude of the signal
+
+signal_energy – Total energy of the audio signal
+
+dominant_freq – Dominant frequency in the audio (Hz)
+
+spectral_centroid – Center of mass of the spectrum
+
+spectral_spread – Spread of the frequency distribution
+
+spectral_flatness – Spectral flatness measure
+
+spectral_entropy – Entropy of the frequency spectrum
+
+skewness – Spectral skewness (asymmetry)
+
+kurtosis – Spectral kurtosis (peakedness)
+
+bandwidth – Effective spectral bandwidth
+
+rolloff – Spectral roll-off frequency
+
+
+
+Note: Some fields like surface, highway, and oneWay are categorical and should be encoded appropriately prior to modeling. All files contain equal-length time windows (typically 3–5 seconds) sampled at 50Hz.
+
+Use Cases:
+
+This dataset can be used for:
+
+Driver behavior classification
+
+Eco-driving detection
+
+Time-series modeling and sensor fusion
+
+Intelligent transportation systems research
+
+Citation:
+
+If you use this dataset in academic work, please cite:
+
+Sağbaş, E. A., (2025). Temporal and modal contributions to smartphone-based multimodal driving behavior classification: A comparative study of classical, deep learning, and patch-based time series transformer models. PeerJ Computer Science. Under Review.
